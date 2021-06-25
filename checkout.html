@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Concluir compra</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/checkout.css" rel="stylesheet">
+
+    <script type="text/javascript">
+       (function () {
+  'use strict'
+
+  window.addEventListener('load', function () {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation')
+
+    // Loop over them and prevent submission
+    Array.prototype.filter.call(forms, function (form) {
+      form.addEventListener('submit', function (event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+        form.classList.add('was-validated')
+      }, false)
+    })
+  }, false)
+}())
+
+    </script>
+
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="py-5 text-center">
+        <a href="index.html">
+          <img class="d-block mx-auto mb-4" src="img/logo.png" alt="Clique aqui para voltar ao index">
+          </a>
+          <p class="lead">Estamos quase lá !... complete sua informações para concluir a compra.</p>  
+            </div>
+            <form class="needs-validation" novalidate action="obrigado.html">
+      <div class="row">
+          <div class="col-md-4 order-md-2 mb-4">
+              <h4 class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="text-muted">Sua sacola</span>
+                  <span class="badge badge-secondary badge-pill">2</span>
+              </h4>
+              <ul class="list-group mb-3 sticky-top">
+                  <li class="list-group-item d-flex justify-content-between lh-condensed">
+                      <div>
+                          <h6 class="my-0">Blusa estampada</h6>
+                          <small class="text-muted">Tamanho M</small>
+                      </div>
+                      <span class="text-muted">R$ 129,00</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between lh-condensed">
+                      <div>
+                          <h6 class="my-0">Camiseta caveira feminina</h6>
+                          <small class="text-muted">Tamanho P</small>
+                      </div>
+                      <span class="text-muted">R$ 129,00</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between bg-light">
+                      <div class="text-success">
+                          <h6 class="my-0">Código promocional</h6>
+                          <small>25MIRROR2021</small>
+                      </div>
+                      <span class="text-success">-$25</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between">
+                      <span>Total (R$)</span>
+                      <strong>R$233,00</strong>
+                  </li>
+              </ul>
+              <form class="card p-2">
+                  <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Digite um código promocional">
+                      <div class="input-group-append">
+                          <button type="submit" class="btn btn-secondary">Enviar</button>
+                      </div>
+                  </div>
+              </form>
+          </div>
+          <div class="col-md-8 order-md-1">
+              <h4 class="mb-3"></h4>
+                  <div class="row">
+                      <div class="col-md-6 mb-3">
+                          <label for="firstName">Digite seu primeiro nome</label>
+                          <input type="text" class="form-control" id="firstName" placeholder="Digite seu nome" value="" required="">
+                          <div class="invalid-feedback"> Este campo é obrigatório. </div>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                          <label for="lastName">Sobrenome</label>
+                          <input type="text" class="form-control" id="lastName" placeholder="Digite seu sobrenome" value="" required="">
+                          <div class="invalid-feedback"> Este campo é obrigatório. </div>
+                      </div>
+                  </div>
+                  <div class="mb-3">
+                      <label for="email">Email<span class="text-muted"></span></label>
+                      <input type="email" class="form-control" id="email" placeholder="seunome@exemplo.com" required="">
+                      <div class="invalid-feedback"> Digite um endereço de email válido. </div>
+                      <div class="valid-feedback">
+                        Esse email é válido.
+                        </div>
+                  </div>
+                  <div class="mb-3">
+                      <label for="address">Endereço</label>
+                      <input type="text" class="form-control" id="address" placeholder="Digite seu endereço completo, nº" required="">
+                      <div class="invalid-feedback"> Este campo é obrigatório. </div>
+                  </div>
+                  <div class="mb-3">
+                      <label for="address2">Completemento<span class="text-muted">(Opcional)</span></label>
+                      <input type="text" class="form-control" id="address2" placeholder="Casa, apartamento, empresa ">
+                  </div>
+                  <div class="row">
+                      <div class="col-md-4 mb-3">
+                          <label for="state">Estado</label>
+                          <select class="custom-select d-block w-100" id="state" required="">
+                              <option value="">Selecione seu estado</option>
+                                <option value="ac">Acre</option> 
+                                <option value="al">Alagoas</option> 
+                                <option value="am">Amazonas</option> 
+                                <option value="ap">Amapá</option> 
+                                <option value="ba">Bahia</option> 
+                                <option value="ce">Ceará</option> 
+                                <option value="df">Distrito Federal</option> 
+                                <option value="es">Espírito Santo</option> 
+                                <option value="go">Goiás</option> 
+                                <option value="ma">Maranhão</option> 
+                                <option value="mt">Mato Grosso</option> 
+                                <option value="ms">Mato Grosso do Sul</option> 
+                                <option value="mg">Minas Gerais</option> 
+                                <option value="pa">Pará</option> 
+                                <option value="pb">Paraíba</option> 
+                                <option value="pr">Paraná</option> 
+                                <option value="pe">Pernambuco</option> 
+                                <option value="pi">Piauí</option> 
+                                <option value="rj">Rio de Janeiro</option> 
+                                <option value="rn">Rio Grande do Norte</option> 
+                                <option value="ro">Rondônia</option> 
+                                <option value="rs">Rio Grande do Sul</option> 
+                                <option value="rr">Roraima</option> 
+                                <option value="sc">Santa Catarina</option> 
+                                <option value="se">Sergipe</option> 
+                                <option value="sp">São Paulo</option> 
+                                <option value="to">Tocantins</option> 
+                          </select>
+                          <div class="invalid-feedback"> Este campo é obrigatório. </div>
+                      </div>
+                      <div class="col-md-5 mb-3">
+                          <label for="zip">Cidade</label>
+                          <input type="text" class="form-control" id="zip" placeholder="" required="">
+                          <div class="invalid-feedback"> Este campo é obrigatório. </div>
+                      </div>
+                      <div class="col-md-3 mb-3">
+                        <label for="zip">CEP</label>
+                        <input type="text" class="form-control" id="zip" placeholder="" required="">
+                        <div class="invalid-feedback"> Este campo é obrigatório. </div>
+                    </div>
+                  </div>
+                  <hr class="mb-4">
+                  <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="same-address">
+                      <label class="custom-control-label" for="same-address">O endereço de entrega é igual ao meu endereço de cobrança</label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="save-info">
+                      <label class="custom-control-label" for="save-info">Salvar essas informações para as próximas compras</label>
+                  </div>
+                  <hr class="mb-4">
+                  <h4 class="mb-3">Payment</h4>
+                  <div class="d-block my-3">
+                      <div class="custom-control custom-radio">
+                          <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="" required="">
+                          <label class="custom-control-label" for="credit">Cartão de crédito</label>
+                      </div>
+                      <div class="custom-control custom-radio">
+                          <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required="">
+                          <label class="custom-control-label" for="debit">Cartão de débito</label>
+                      </div>
+                      <div class="custom-control custom-radio">
+                          <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required="">
+                          <label class="custom-control-label" for="paypal">PIX</label>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-6 mb-3">
+                          <label for="cc-name">Nome no cartão</label>
+                          <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+                          <small class="text-muted">Nome completo</small>
+                          <div class="invalid-feedback"> Este campo é obrigatório. </div>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                          <label for="cc-number">Numero do cartão</label>
+                          <input type="text" class="form-control" id="cc-number" placeholder="" required="">
+                          <div class="invalid-feedback"> Este campo é obrigatório. </div>
+                          <small class="text-muted">Número completo</small>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-3 mb-3">
+                          <label for="cc-expiration">Data de válidade</label>
+                          <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
+                          <div class="invalid-feedback"> Este campo é obrigatório. </div>
+                      </div>
+                      <div class="col-md-3 mb-3">
+                          <label for="cc-cvv">CVV</label>
+                          <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+                          <div class="invalid-feedback"> Este campo é obrigatório. </div>
+                          <small class="text-muted">3 Números atrás do cartão</small>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="gridCheck" required>
+                      <label class="form-check-label" for="gridCheck">
+                        Aceitar os <a href="#" data-toggle="modal" data-target="#ModalLongoExemplo">termos e condições da Mirror</a> Fashion
+                      </label>
+                    </div>
+                  </div>
+                  <hr class="mb-4">
+                  <button class="btn btn-primary btn-lg btn-block" type="submit">Concluir a compra</button>
+                  </form>
+                  
+          </div>
+      </div>
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+          <p class="mb-1">© Mirror Fashion - Direitos reservados 2021</p>
+          <ul class="list-inline">
+              <li class="list-inline-item"><a href="#">Privacy</a></li>
+              <li class="list-inline-item"><a href="#">Terms</a></li>
+              <li class="list-inline-item"><a href="#">Support</a></li>
+          </ul>
+      </footer>
+  </div>
+
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- Popper e Bootstrap JS Separados-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+ </body>
+
+</html>
